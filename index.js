@@ -1,6 +1,22 @@
+function reverse(word) {
+  return word.split("").reverse().join("");
+}
+
 function isPalindrome(word) {
   // Write your algorithm here
+    //first letters match last letters, word is symetric
+  // const reversedWord = reverse(word);
+
+  // return word === reversedWord;
+
+  for (let i = 0; i < word.length / 2; i++) {
+    const j = word.length - 1 - i;
+    if(word[i] !== word[j]) return false;
+  }
+
+  return true
 }
+
 
 /* 
   Add your pseudocode here
